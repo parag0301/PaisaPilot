@@ -7,7 +7,6 @@ A full-stack MERN personal finance management application designed to help users
 ## 🌐 Live Demo
 
 - **Live Application:** https://paisa-pilot-beta.vercel.app
-- **Backend API:** https://paisapilot-backend.onrender.com
 
 ---
 
