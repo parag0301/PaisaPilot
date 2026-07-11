@@ -1,31 +1,34 @@
 # 💰 PaisaPilot
 
-A full-stack MERN personal finance management application that helps users manage their income, expenses, budgets, and recurring transactions through a clean and responsive dashboard.
+A full-stack MERN personal finance management application designed to help users efficiently manage their personal finances. PaisaPilot enables users to track income, expenses, recurring transactions, and financial insights through a clean and user-friendly interface.
 
 ---
 
-## 🚀 Features
+## ✨ Features
 
-- 🔐 JWT Authentication (Login & Register)
-- 💵 Income Management
+- 🔐 Secure User Authentication (JWT)
+- 💰 Income Management
 - 💸 Expense Management
-- 📊 Dashboard Analytics
-- 📅 Recurring Expenses
-- 📈 Budget Tracking
-- 📄 Export Data to Excel
+- 📊 Dashboard with Financial Overview
+- 🔄 Recurring Expense Management
+- 📁 Export Income & Expense Reports to Excel
 - 📱 Responsive User Interface
+- ⚡ RESTful API Architecture
 
 ---
 
 ## 🛠️ Tech Stack
 
 ### Frontend
+
 - React.js
 - Vite
 - Axios
 - React Router DOM
+- CSS
 
 ### Backend
+
 - Node.js
 - Express.js
 - MongoDB Atlas
@@ -37,10 +40,12 @@ A full-stack MERN personal finance management application that helps users manag
 ## 📂 Project Structure
 
 ```text
-PaisaPilot/
+PaisaPilot
 │
 ├── backend/
 ├── frontend/
+├── .env.example
+├── .gitignore
 └── README.md
 ```
 
@@ -48,7 +53,7 @@ PaisaPilot/
 
 ## ⚙️ Installation
 
-### Clone the repository
+### Clone Repository
 
 ```bash
 git clone https://github.com/parag0301/PaisaPilot.git
@@ -77,7 +82,7 @@ npm run dev
 ### Backend (.env)
 
 ```env
-MONGO_URI=your_mongodb_connection
+MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
 PORT=4000
 CLIENT_URL=http://localhost:5173
@@ -91,12 +96,27 @@ VITE_API_URL=http://localhost:4000
 
 ---
 
-## 🚧 Project Status
+## 🎯 Key Features
 
-Currently under active development and continuously improving.
+- Full-stack MERN architecture
+- JWT-based authentication
+- MongoDB Atlas cloud database
+- RESTful API implementation
+- Modular project structure
+- Responsive user interface
+- Excel report generation
+
+---
+
+## 📌 Academic Project
+
+Developed as part of the Bachelor of Computer Applications (BCA) final year academic curriculum.
 
 ---
 
 ## 👨‍💻 Author
 
 **Parag Audichya**
+
+Bachelor of Computer Applications (BCA)  
+Mohanlal Sukhadia University (MLSU), Udaipur
