@@ -1,6 +1,13 @@
 # 💰 PaisaPilot
 
-A full-stack MERN personal finance management application designed to help users efficiently manage their personal finances. PaisaPilot enables users to track income, expenses, recurring transactions, and financial insights through a clean and user-friendly interface.
+A full-stack MERN personal finance management application designed to help users efficiently manage their income, expenses, recurring transactions, and financial insights through a clean and user-friendly interface.
+
+---
+
+## 🌐 Live Demo
+
+- **Live Application:** https://paisa-pilot-beta.vercel.app
+- **Backend API:** https://paisapilot-backend.onrender.com
 
 ---
 
@@ -20,7 +27,6 @@ A full-stack MERN personal finance management application designed to help users
 ## 🛠️ Tech Stack
 
 ### Frontend
-
 - React.js
 - Vite
 - Axios
@@ -28,7 +34,6 @@ A full-stack MERN personal finance management application designed to help users
 - CSS
 
 ### Backend
-
 - Node.js
 - Express.js
 - MongoDB Atlas
@@ -77,6 +82,16 @@ npm run dev
 
 ---
 
+## 🚀 Getting Started
+
+1. Clone the repository.
+2. Install dependencies for both frontend and backend.
+3. Configure the required environment variables.
+4. Start the backend and frontend servers.
+5. Open the application in your browser.
+
+---
+
 ## 🔐 Environment Variables
 
 ### Backend (.env)
@@ -96,7 +111,7 @@ VITE_API_URL=http://localhost:4000
 
 ---
 
-## 🎯 Key Features
+## 🎯 Key Highlights
 
 - Full-stack MERN architecture
 - JWT-based authentication
