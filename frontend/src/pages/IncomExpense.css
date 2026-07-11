@@ -1,0 +1,91 @@
+/* Shared styles for Income and Expense pages */
+
+.page-header-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.page-header-row .page-header {
+  margin-bottom: 0;
+}
+
+.download-btn {
+  white-space: nowrap;
+  align-self: flex-end;
+}
+
+/* Overview stat strip */
+.overview-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+/* Range filter row */
+.range-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.range-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* Two column grid: form on left, table on right */
+.income-grid,
+.expense-grid {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.card-section-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.table-section {
+  min-height: 300px;
+}
+
+.full-width {
+  width: 100%;
+  justify-content: center;
+  padding: 12px;
+}
+
+/* Modal action row */
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .income-grid,
+  .expense-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .overview-stats {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+}

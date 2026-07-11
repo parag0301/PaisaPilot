@@ -1,1 +1,318 @@
-@import "tailwindcss"; 
+/* ================================
+   PaisaPilot – Global Styles
+   ================================ */
+
+/* CSS Variables — change these to retheme the whole app */
+:root {
+  --primary: #5046e5;
+  --primary-light: #ede9fe;
+  --primary-dark: #3730a3;
+
+  --income: #16a34a;
+  --income-light: #dcfce7;
+  --expense: #dc2626;
+  --expense-light: #fee2e2;
+
+  --bg: #f3f4f8;
+  --card: #ffffff;
+  --sidebar-bg: #0f172a;
+  --sidebar-text: #cbd5e1;
+  --sidebar-active: #5046e5;
+
+  --text-primary: #0f172a;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+
+  --border: #e2e8f0;
+  --shadow: 0 2px 16px rgba(15, 23, 42, 0.07);
+  --shadow-md: 0 4px 24px rgba(15, 23, 42, 0.10);
+
+  --radius: 14px;
+  --radius-sm: 8px;
+  --radius-lg: 20px;
+
+  --font: 'Plus Jakarta Sans', sans-serif;
+  --font-display: 'Syne', sans-serif;
+}
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font);
+  border: none;
+  outline: none;
+}
+
+input, select, textarea {
+  font-family: var(--font);
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ==============================
+   Layout — Dashboard wrapper
+   ============================== */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 260px;
+  padding: 32px;
+  min-height: 100vh;
+  transition: margin 0.3s ease;
+}
+
+/* Page header */
+.page-header {
+  margin-bottom: 28px;
+}
+
+.page-header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.page-header p {
+  color: var(--text-secondary);
+  margin-top: 4px;
+  font-size: 0.95rem;
+}
+
+/* Shared card style */
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+}
+
+/* Shared form input */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.form-input {
+  padding: 11px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  background: var(--card);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(80, 70, 229, 0.12);
+}
+
+/* Shared buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(80, 70, 229, 0.35);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary);
+  border: 1.5px solid var(--primary);
+}
+
+.btn-outline:hover {
+  background: var(--primary-light);
+}
+
+.btn-danger {
+  background: var(--expense-light);
+  color: var(--expense);
+}
+
+.btn-danger:hover {
+  background: var(--expense);
+  color: white;
+}
+
+.btn-success {
+  background: var(--income-light);
+  color: var(--income);
+}
+
+.btn-success:hover {
+  background: var(--income);
+  color: white;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badge-income {
+  background: var(--income-light);
+  color: var(--income);
+}
+
+.badge-expense {
+  background: var(--expense-light);
+  color: var(--expense);
+}
+
+/* Divider */
+.divider {
+  height: 1px;
+  background: var(--border);
+  margin: 20px 0;
+}
+
+/* Range filter tabs */
+.range-tabs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.range-tab {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: var(--card);
+  color: var(--text-secondary);
+  border: 1.5px solid var(--border);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.range-tab:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.range-tab.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+/* Responsive — collapse sidebar on mobile */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    padding: 16px;
+    padding-bottom: 80px; /* space for mobile nav */
+  }
+}
+/* ==============================
+   Dark Mode Theme
+   ============================== */
+
+[data-theme="dark"] {
+  --primary: #818cf8;
+  --primary-light: #1e1b4b;
+  --primary-dark: #6366f1;
+
+  --income: #4ade80;
+  --income-light: #052e16;
+  --expense: #fb7185;
+  --expense-light: #4c0519;
+
+  --bg: #0b1120;
+  --card: #111827;
+  --sidebar-bg: #020617;
+  --sidebar-text: #cbd5e1;
+  --navbar-bg: rgba(17, 24, 39, 0.92);
+  --sidebar-active: #6366f1;
+
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+
+  --border: #243244;
+  --shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 4px 24px rgba(0, 0, 0, 0.45);
+}
+
+body,
+.navbar,
+.landing,
+.auth-page,
+.notfound-page,
+.main-content,
+.card,
+.stat-card,
+.tx-summary-item,
+.notfound-card,
+.modal-box,
+.form-input,
+.range-tab,
+.feature-card {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}

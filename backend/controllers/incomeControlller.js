@@ -28,7 +28,7 @@ export async function addIncome(req, res) {
         res.json({
             success: true,
             message: "Income added successfully",
-            
+            data: newIncome
         });
     }
 
@@ -68,7 +68,7 @@ export async function updateIncome(req, res) {
     try {
         const updatedIncome = await incomeModel.findOneAndUpdate(
             { _id: id, userId },
-            { description, amount},
+            { description, amount, category, date: new Date(date) },
             { new: true }
         ); 
 

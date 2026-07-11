@@ -33,7 +33,7 @@ const incomeSchema = new mongoose.Schema({
     default: "income",  
   },
 },{
-  timestamp : true 
+  timestamps : true 
 });
 
 const incomeModel = mongoose.models.income || mongoose.model('income', incomeSchema);

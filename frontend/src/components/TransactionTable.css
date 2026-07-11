@@ -1,0 +1,110 @@
+.tx-table-wrap {
+  overflow-x: auto;
+  border-radius: var(--radius);
+}
+
+.tx-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.tx-table thead tr {
+  border-bottom: 2px solid var(--border);
+}
+
+.tx-table th {
+  text-align: left;
+  padding: 12px 16px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+}
+
+.tx-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-primary);
+  vertical-align: middle;
+}
+
+.tx-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.tx-table tbody tr:hover {
+  background: var(--bg);
+}
+
+.tx-description {
+  font-weight: 500;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tx-category {
+  background: var(--primary-light);
+  color: var(--primary);
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.tx-date {
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.tx-amount {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.income-color  { color: var(--income); }
+.expense-color { color: var(--expense); }
+
+.tx-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.tx-action-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  background: transparent;
+}
+
+.edit-btn {
+  color: var(--primary);
+}
+
+.edit-btn:hover {
+  background: var(--primary-light);
+}
+
+.delete-btn {
+  color: var(--expense);
+}
+
+.delete-btn:hover {
+  background: var(--expense-light);
+}
+
+/* Mobile: stack some columns */
+@media (max-width: 600px) {
+  .tx-table th:nth-child(2),
+  .tx-table td:nth-child(2) {
+    display: none;
+  }
+}

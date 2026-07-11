@@ -1,0 +1,100 @@
+.smart-tips-card {
+  margin: 24px 0;
+  padding: 22px;
+  border-radius: var(--radius-lg);
+  
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.smart-tips-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.smart-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.smart-tips-top h2 {
+  font-size: 1.25rem;
+  color: var(--text-primary);
+}
+
+.smart-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.smart-tips-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.smart-tip-box {
+  display: flex;
+  gap: 12px;
+  padding: 15px;
+  border-radius: var(--radius-sm);
+  background: var(--card);
+  border: 1px solid var(--border);
+}
+
+.tip-emoji {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.smart-tip-box h3 {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  margin-bottom: 5px;
+}
+
+.smart-tip-box p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.smart-quote {
+  margin-top: 15px;
+  padding: 13px 15px;
+  border-radius: var(--radius-sm);
+  background: rgba(99, 102, 241, 0.12);
+  color: var(--primary);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-weight: 700;
+}
+
+.smart-quote p {
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .smart-tips-grid {
+    grid-template-columns: 1fr;
+  }
+}

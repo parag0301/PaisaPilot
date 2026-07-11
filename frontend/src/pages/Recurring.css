@@ -1,0 +1,125 @@
+.recurring-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+
+}
+
+.recurring-info-card {
+  margin-bottom: 22px;
+  background: linear-gradient(135deg, var(--card), var(--primary-light));
+  
+}
+
+.recurring-info-card h2 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+  color: var(--text-primary);
+}
+
+.recurring-info-card p {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+}
+
+.recurring-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 18px;
+}
+
+.recurring-card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.recurring-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.recurring-card-top h2 {
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.recurring-amount {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--expense);
+  white-space: nowrap;
+}
+
+.recurring-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.recurring-details div {
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  border: 1px solid var(--border);
+}
+
+.recurring-details span {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.recurring-details strong {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.recurring-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.recurring-actions .btn {
+  flex: 1;
+  justify-content: center;
+  padding: 9px 12px;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 12px;
+  margin-bottom: 16px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border);
+  background: var(--bg);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.checkbox-row input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .recurring-details {
+    grid-template-columns: 1fr;
+  }
+
+  .recurring-actions {
+    flex-direction: column;
+  }
+}
